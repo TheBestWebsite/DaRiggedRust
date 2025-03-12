@@ -1,7 +1,6 @@
 use std::io;
 fn main() {
     println!("Welcome to my little game!\nYou shall not beat me.");
-    //let mut v: Vec<u8> = Vec::new()
     let v = make_checklist();
     let mut total: u32 = calc_optimal_move(0, &v);
     println!(
@@ -66,6 +65,8 @@ fn make_checklist() -> Vec<bool> {
         } else {
             v[number] = false;
         }
+        // Debug code
+        // println!("{}, {}", number, v[number]);
     }
     v
 }
