@@ -41,9 +41,9 @@ fn get_number(total: u32) -> u32 {
 }
 
 fn calc_optimal_move(total: u32, v: &Vec<bool>) -> u32 {
-    if v[(total + 4) as usize] {
+    if total + 4 < v.len() as u32 || v[(total + 4) as usize] {
         4
-    } else if v[(total + 3) as usize] {
+    } else if total + 3 < v.len() as u32 || v[(total + 3) as usize] {
         3
     } else if v[(total + 1) as usize] {
         1
@@ -58,8 +58,8 @@ fn make_checklist() -> Vec<bool> {
         if number == 25 {
             v[number] = true;
         } else if v[number + 1]
-            || (number + 3 <= v.len() - 1 && v[number + 3])
-            || (number + 4 <= v.len() - 1 && v[number + 4])
+            || (number + 3 < v.len() - 1 && v[number + 3])
+            || (number + 4 < v.len() - 1 && v[number + 4])
         {
             v[number] = false;
         } else {
