@@ -41,9 +41,9 @@ fn get_number(total: u32) -> u32 {
 }
 
 fn calc_optimal_move(total: u32, v: &Vec<bool>) -> u32 {
-    if total + 4 < v.len() as u32 || v[(total + 4) as usize] {
+    if total + 4 < v.len() as u32 && v[(total + 4) as usize] {
         4
-    } else if total + 3 < v.len() as u32 || v[(total + 3) as usize] {
+    } else if total + 3 < v.len() as u32 && v[(total + 3) as usize] {
         3
     } else if v[(total + 1) as usize] {
         1
