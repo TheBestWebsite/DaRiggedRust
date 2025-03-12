@@ -57,9 +57,9 @@ fn make_checklist() -> Vec<bool> {
     for number in (0..26).rev() {
         if number == 25 {
             v[number] = true;
-        } else if v[number + 1] == true
-            || (number + 3 <= v.len() - 1 && v[number + 3] == true)
-            || (number + 4 <= v.len() - 1 && v[number + 4] == true)
+        } else if v[number + 1]
+            || (number + 3 <= v.len() - 1 && v[number + 3])
+            || (number + 4 <= v.len() - 1 && v[number + 4])
         {
             v[number] = false;
         } else {
