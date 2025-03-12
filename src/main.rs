@@ -15,7 +15,7 @@ fn main() {
             v[number] = false;
         }
     }
-    let mut total: u32 = 4;
+    let mut total: u32 = calc_optimal_move(0, &v);
     println!(
         "I call first! I start with {}. On your turn, type 1, 3, or 4. I will add it for you. If you try any funny business, I will panic.",
         total
@@ -38,5 +38,17 @@ fn get_number(total: u32) -> u32 {
     } else {
         println!("Bad number");
         get_number(total)
+    }
+}
+
+fn calc_optimal_move(total: u32, v: &Vec<bool>) -> u32 {
+    if v[(total + 4) as usize] {
+        4
+    } else if v[(total + 3) as usize] {
+        3
+    } else if v[(total + 1) as usize] {
+        1
+    } else {
+        0
     }
 }
