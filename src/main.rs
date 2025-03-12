@@ -54,16 +54,16 @@ fn calc_optimal_move(total: u32, v: &Vec<bool>) -> u32 {
 
 fn make_checklist() -> Vec<bool> {
     let mut v: Vec<bool> = vec![false; 26];
-    for number in (0..25).rev() {
+    for number in (0..26).rev() {
         if number == 25 {
             v[number] = true;
-        } else if v[number + 1] == false
-            && (number + 3 <= v.len() - 1 && v[number + 3] == false)
-            && (number + 4 <= v.len() - 1 && v[number + 4] == false)
+        } else if v[number + 1] == true
+            || (number + 3 <= v.len() - 1 && v[number + 3] == true)
+            || (number + 4 <= v.len() - 1 && v[number + 4] == true)
         {
-            v[number] = true;
-        } else {
             v[number] = false;
+        } else {
+            v[number] = true;
         }
         // Debug code
         // println!("{}, {}", number, v[number]);
