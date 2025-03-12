@@ -32,7 +32,7 @@ fn get_number(total: u32) -> u32 {
         .trim()
         .parse()
         .expect("That isn't a number - I hate you!");
-    if number == 1 || number == 3 || number == 4 {
+    if (number == 1 || number == 3 || number == 4) && number as u32 + total <= 25 {
         let number: u32 = number as u32;
         total + number
     } else {
