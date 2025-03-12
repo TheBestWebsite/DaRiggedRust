@@ -20,7 +20,19 @@ fn main() {
         "I call first! I start with {}. On your turn, type 1, 3, or 4. I will add it for you. If you try any funny business, I will panic.",
         total
     );
-    total = get_number(total);
+    loop {
+        total = get_number(total);
+        println!(
+            "I play {}, bringing the total to {}.",
+            calc_optimal_move(total, &v),
+            calc_optimal_move(total, &v) + total
+        );
+        total = calc_optimal_move(total, &v) + total;
+        if total >= 25 {
+            break;
+        }
+    }
+    println!("I win!");
 }
 
 fn get_number(total: u32) -> u32 {
