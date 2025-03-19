@@ -4,7 +4,7 @@ fn main() {
     let v = make_checklist();
     let mut total: u32 = calc_optimal_move(0, &v);
     println!(
-        "I call first! I start with {}. On your turn, type 1, 3, or 4. I will add it for you. If you try any funny business, I will panic.",
+        "I call first! I start with {}. On your turn, type 1, 3, or 4. I will add it for you.",
         total
     );
     loop {
@@ -30,12 +30,12 @@ fn get_number(total: u32) -> u32 {
     let number: i32 = input
         .trim()
         .parse()
-        .expect("That isn't a number - I hate you!");
+        .unwrap_or(0);
     if (number == 1 || number == 3 || number == 4) && number as u32 + total <= 25 {
         let number: u32 = number as u32;
         total + number
     } else {
-        println!("Bad number");
+        println!("Bad input, try again with total {}", total);
         get_number(total)
     }
 }
