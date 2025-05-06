@@ -6,6 +6,6 @@ We start at zero. The computer goes first (so as to guarantee your loss). Each t
 ### Now go forth! Impress your friends with this!
 Just make sure to give me credit!
 # Notes
-A slightly modified version of this game can be found on Scratch at https://scratch.mit.edu/projects/1151990314. Go there for more complete credits.
+A slightly modified version of this game can be found on Scratch at https://scratch.mit.edu/projects/1151990314. Go there for more complete credits. (Note in a note: I am OneGoodChance)
 
 Thanks to TED-ED and Dan Finkel for the original inspiration for this project, "Can you solve the rogue AI riddle?" The lesson can be found on TED-ED's website at https://ed.ted.com/lessons/can-you-solve-the-rogue-ai-riddle-dan-finkel. (Note: the answer is also the answer to this game - I encourage you to try to solve the riddle before looking at the answer.)
