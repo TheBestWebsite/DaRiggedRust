@@ -49,7 +49,7 @@ fn calc_optimal_move(total: u32, checklist: &Vec<bool>, moves: &Vec<i32>) -> u32
 
 fn make_checklist() -> Vec<bool> {
     let mut checklist: Vec<bool> = vec![false; 26];
-    for number in (0..26).rev() {
+    for number in (0..=25).rev() {
         if number == 25 {
             checklist[number] = true;
         } else if checklist[number + 1]
