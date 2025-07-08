@@ -1,6 +1,12 @@
 [package]
-name = "TheOPgame"
+name = "TheOPgame25"
 version = "0.1.0"
 edition = "2024"
+description = "A version of the game Nim with a computer that cannot be beaten."
+repository = "https://github.com/TheBestWebsite/DaRiggedRust"
+readme = true
+license = "MIT"
+build = false
+exclude = [".*", "/.*"]
 
 [dependencies]
