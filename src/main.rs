@@ -1,6 +1,10 @@
 use std::io;
 fn main() {
     println!("Welcome to my little game!\nYou shall not beat me.");
+    run();
+}
+
+fn run() {
     let checklist = make_checklist();
     let moves = vec![4, 3, 1];
     let mut total: u32 = calc_optimal_move(0, &checklist, &moves);
