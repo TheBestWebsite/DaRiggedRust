@@ -1,6 +1,6 @@
 [package]
 name = "TheOPgame25"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
 description = "A version of the game Nim with a computer that cannot be beaten."
 repository = "https://github.com/TheBestWebsite/DaRiggedRust"
