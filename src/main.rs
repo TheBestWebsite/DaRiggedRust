@@ -48,7 +48,7 @@ fn calc_optimal_move(total: u32, checklist: &Vec<bool>, moves: &Vec<i32>) -> u32
             return *number as u32;
         }
     };
-    return 1;
+    1
 }
 
 fn make_checklist() -> Vec<bool> {
