@@ -1,5 +1,5 @@
 [package]
-name = "TheOPgame25"
+name = "the_op_game_25"
 version = "1.0.0"
 edition = "2024"
 description = "A version of the game Nim with a computer that cannot be beaten."
